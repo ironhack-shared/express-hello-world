@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cat</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>{{name}}</h1>
+    {{#unless bootcamp}}
+      <h2>This won't be displayed!!</h2>
+    {{/unless}}
+    {{#each cities}}
+      <li style="color: {{#if @first}}green{{else if @last}}red{{else}}blue{{/if}}">{{@index}}: {{this}}</li>
+      {{else}}
+          <p>No cities yet!</p>
+      {{/each}}
+      {{#with address}}
+        <p>{{street}}, {{number}}</p>
+      {{/with}}
+   <p>This is my second route</p>
+    <img src="/images/cool-cat.jpg" />
+  </body>
+</html>
